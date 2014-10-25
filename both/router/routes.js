@@ -10,10 +10,6 @@ Router.configure({
 });
 
 Router.map(function () {
-  /*
-    Example:
-      this.route('home', {path: '/'});
-  */
   this.route('memes.index', {path: '/'});
   this.route('circle.memes', {path: '/circle/:_id', controller: 'MemesIndexController'});
   this.route('create.meme', {path: '/create_meme'});
