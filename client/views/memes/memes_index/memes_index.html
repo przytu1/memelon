@@ -1,0 +1,16 @@
+<template name="MemesIndex">
+
+    <div id="content-container">
+      {{#each items}}
+          <div class="row stream-row">
+              {{> MemeItem }}
+          </div>
+      {{/each}}
+    </div>
+
+    <div id="button-container">
+        {{> CreateMemeButton }}
+    </div>
+
+</template>
+

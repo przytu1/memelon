@@ -1,0 +1,36 @@
+/*****************************************************************************/
+/* MemesIndex: Style */
+/*****************************************************************************/
+
+#content-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 70px;
+}
+
+#content-container .row {
+  margin-bottom: 2%;
+}
+
+#button-container {
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+
+#content-container div.stream-row:nth-child(even) {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+}
+
+#content-container div.stream-row:nth-child(odd) {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+}

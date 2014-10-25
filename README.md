@@ -1,4 +1,4 @@
 memelon
 =======
 
-Memelon @ Facebook Hackathon
+Share your memeries within circles. Privately.
