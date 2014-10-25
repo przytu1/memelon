@@ -3,24 +3,24 @@
 /* CreateCircle: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
 Template.CreateCircle.events({
-
+  'click #add-friend': function(event, template) {
+      var friendEmail = template.find('#friend-email').value;
+      var circleEmails = 
+        Session.get("friends-in-circle") == undefined ? [] : Session.get("friends-in-circle");
+      circleEmails.push(friendEmail)
+      Session.set("friends-in-circle", circleEmails)
+      template.find('#friend-email').value = "";
+  }
 });
 
 Template.CreateCircle.helpers({
    circles: function () {
      return Circles.find({}, { sort: { createdAt: -1 } });
    },
-   selectedCircle: function () {
-     var circleId = Session.get("addToCircleId");
-     var circle = null;
-     if(!circleId){
-       circle = Circles.findOne();
-       circleId = circle._id;
-       Session.set("addToCircleId", circleId);
-     } else {
-       circle = Circles.findOne({_id: circleId});
-     }
-     return circle;
+   friendsInCircle: function () {
+     var circleEmails = 
+       Session.get("friends-in-circle") == undefined ? [] : Session.get("friends-in-circle");
+     return circleEmails;
    }
 });
 
