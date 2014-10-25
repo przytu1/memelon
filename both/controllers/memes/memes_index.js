@@ -25,7 +25,8 @@ MemesIndexController = RouteController.extend({
         circles: Circles.find({}, { sort: { name: 1 } }),
         items: function () {
           return Memes.find({}, { sort: { createdAt: -1 } });
-        }
+        },
+        emptyCircle: Memes.find({}).count() == 0
       }
     }
   },

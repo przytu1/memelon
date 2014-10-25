@@ -1,11 +1,17 @@
 <template name="MemesIndex">
 
     <div id="content-container">
-      {{#each items}}
-          <div class="row stream-row">
-              {{> MemeItem }}
-          </div>
-      {{/each}}
+      {{#if emptyCircle}}
+        <div id="main-content" class="col-sm-6 col-sm-offset-2">
+          <div id="create-circle-title" style="text-align: center">DOH! No memes in this circle.<br />Create new ones!</div>
+        </div>
+      {{else}}
+        {{#each items}}
+            <div class="row stream-row">
+                {{> MemeItem }}
+            </div>
+        {{/each}}
+      {{/if}}
     </div>
 
     <div id="button-container">
