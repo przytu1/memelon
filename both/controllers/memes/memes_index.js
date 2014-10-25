@@ -15,6 +15,7 @@ MemesIndexController = RouteController.extend({
     if (this.ready()) {
       var circleId = this.params._id;
       var currentCircleName = "All newest";
+      var userEmail = Meteor.user().emails[0].address;
       if (circleId) {
         currentCircleName = '#' + Circles.findOne({_id: circleId}).name;
         Session.set("addToCircleId", circleId);
@@ -22,7 +23,7 @@ MemesIndexController = RouteController.extend({
 
       return {
         currentCircleName: currentCircleName,
-        circles: Circles.find({}, { sort: { name: 1 } }),
+        circles: Circles.find({ $or: [{users: { $in: [userEmail]  }}, {name: "public"}]}, { sort: { name: 1 } }),
         items: function () {
           return Memes.find({}, { sort: { createdAt: -1 } });
         },
