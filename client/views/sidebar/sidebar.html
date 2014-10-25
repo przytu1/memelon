@@ -38,7 +38,9 @@
       {{#if currentUser}}
         {{> UserLoggedIn }}
       {{else}}
-        {{> loginButtons align="right"}}
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons align="right"}}
+        </ul>
       {{/if}}
     </header>
 
