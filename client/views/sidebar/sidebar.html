@@ -23,7 +23,6 @@
           </a>
           </li>
         </ul>
-      {{/if}}
 
       <ul class="nav navbar-nav navbar-left">
         <li class="dropdown hide-xs-mobile">
@@ -37,6 +36,7 @@
         </ul>
         </li>
       </ul>
+      {{/if}}
 
       {{#if currentUser}}
         {{> UserLoggedIn }}
@@ -72,7 +72,7 @@
                         </a>
                         <ul class="sidebar-dropdown" style="display: block;">
 
-                        {{#each circles}}
+                        {{#each ownedCircles}}
                             <li>{{> CircleMenuItem }}</li>
                         {{/each}}
                         </ul>

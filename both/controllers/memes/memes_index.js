@@ -24,6 +24,7 @@ MemesIndexController = RouteController.extend({
       return {
         currentCircleName: currentCircleName,
         circles: Circles.find({ $or: [{users: { $in: [userEmail]  }}, {name: "public"}]}, { sort: { name: 1 } }),
+        ownedCircles: Circles.find({owner: Meteor.userId()}, { sort: { name: 1 } }),
         items: function () {
           return Memes.find({}, { sort: { createdAt: -1 } });
         },

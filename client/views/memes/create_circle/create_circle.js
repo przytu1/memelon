@@ -24,6 +24,7 @@ Template.CreateCircle.events({
       }
       Circles.insert(doc);
       var createdCircle = Circles.find(doc).fetch()[0];
+      Session.set("friends-in-circle", [])
       Router.go("circle.memes", {_id: createdCircle._id});
   }
 });
