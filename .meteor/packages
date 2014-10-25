@@ -11,6 +11,7 @@ mrt:jquery-ui
 mrt:moment
 mr:camera
 mrt:nprogress
-accounts-ui
 accounts-password
+accounts-ui-unstyled
+accounts-ui
 
