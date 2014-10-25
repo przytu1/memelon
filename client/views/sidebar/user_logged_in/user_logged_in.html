@@ -15,10 +15,10 @@
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
       {{userName}} <img class="img-circle" src="/img/avatar.png" alt="avatar" /> <b class="caret"></b>
     </a>
-    <ul class="dropdown-menu">
-      <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-      <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
-      <li><a href="#"><i class="fa fa-share"></i> Logout</a></li>
+    <ul class="dropdown-menu" id="loggedUserDropdown">
+      <li><a href="#" class="inactiveUiOpacity"><i class="fa fa-user"></i> Profile</a></li>
+      <li><a href="#" class="inactiveUiOpacity"><i class="fa fa-gear"></i> Settings</a></li>
+      <li><a href="#" id="logout"><i class="fa fa-share"></i> Logout</a></li>
     </ul>
     </li>
   </ul>

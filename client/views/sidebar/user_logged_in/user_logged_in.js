@@ -3,3 +3,9 @@ Template.UserLoggedIn.helpers({
     return Meteor.user().emails[0].address;
   }
 });
+
+Template.UserLoggedIn.events({
+  'click #logout': function(event, template) {
+      Meteor.logout()
+  }
+});
