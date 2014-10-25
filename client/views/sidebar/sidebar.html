@@ -4,23 +4,26 @@
     <!-- Header -->
     <header class="navbar main-header">
       <a class="navbar-brand"> memelon </a>
-      <ul class="nav navbar-nav navbar-left sidebar-toggle-ul">
-        <li class="navbar-main hidden-lg hidden-md">
-        <a href="javascript:void(0);" id="sidebar-toggle">
-          <span class="meta">
-            <span class="icon"><i class="fa fa-bars"></i></span>
-          </span>
-        </a>
-        </li>
 
-        <li class="navbar-main hidden-sm hidden-xs">
-        <a href="javascript:void(0);" id="sidebar-collapse">
-          <span class="meta">
-            <span class="icon"><i class="fa fa-outdent"></i></span>
-          </span>
-        </a>
-        </li>
-      </ul>
+      {{#if currentUser}}
+        <ul class="nav navbar-nav navbar-left sidebar-toggle-ul">
+          <li class="navbar-main hidden-lg hidden-md">
+          <a href="javascript:void(0);" id="sidebar-toggle">
+            <span class="meta">
+              <span class="icon"><i class="fa fa-bars"></i></span>
+            </span>
+          </a>
+          </li>
+
+          <li class="navbar-main hidden-sm hidden-xs">
+          <a href="javascript:void(0);" id="sidebar-collapse">
+            <span class="meta">
+              <span class="icon"><i class="fa fa-outdent"></i></span>
+            </span>
+          </a>
+          </li>
+        </ul>
+      {{/if}}
 
       <ul class="nav navbar-nav navbar-left">
         <li class="dropdown hide-xs-mobile">
@@ -44,51 +47,53 @@
       {{/if}}
     </header>
 
-    <div class="sidebar sidebar-left">
-      <div class="content">
+    {{#if currentUser}}
+        <div class="sidebar sidebar-left">
+          <div class="content">
 
-        <div class="tab-content sidetabs">
-          <div class="tab-pane active">
-            <ul class="sidemenu">
-              <!-- <li class="sidebar-header">Menu</li> -->
-              <li class="active">
-              <a href="{{pathFor route='memes.index'}}">
-                <span class="icon"><i class="fa fa-film"></i></span>
-                <span class="name">Streams</span>
-                <span class="number pull-right"><span class="label label-primary">4</span></span>
-              </a>
-              </li>
-
-
-                <li>
-                    <a href="javascript:void(0);">
-                        <span class="icon"><i class="fa fa-users"></i></span>
-                        <span class="name">Manage circle</span>
-                        <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
-                    </a>
-                    <ul class="sidebar-dropdown" style="display: block;">
-
-                    {{#each circles}}
-                        <li>{{> CircleMenuItem }}</li>
-                    {{/each}}
-                    </ul>
-                </li>
-
-              <li>
-              <a href="{{pathFor route='create.circle'}}">
-                <span class="icon"><i class="fa fa-plus-circle"></i></span>
-                <span class="name">Create circle</span>
-              </a>
-              </li>
+            <div class="tab-content sidetabs">
+              <div class="tab-pane active">
+                <ul class="sidemenu">
+                  <!-- <li class="sidebar-header">Menu</li> -->
+                  <li class="active">
+                  <a href="{{pathFor route='memes.index'}}">
+                    <span class="icon"><i class="fa fa-film"></i></span>
+                    <span class="name">Streams</span>
+                    <span class="number pull-right"><span class="label label-primary">4</span></span>
+                  </a>
+                  </li>
 
 
-            </ul>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span class="icon"><i class="fa fa-users"></i></span>
+                            <span class="name">Manage circle</span>
+                            <span class="arrow"><i class="arrow fa fa-angle-right pull-right"></i></span>
+                        </a>
+                        <ul class="sidebar-dropdown" style="display: block;">
 
+                        {{#each circles}}
+                            <li>{{> CircleMenuItem }}</li>
+                        {{/each}}
+                        </ul>
+                    </li>
+
+                  <li>
+                  <a href="{{pathFor route='create.circle'}}">
+                    <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                    <span class="name">Create circle</span>
+                  </a>
+                  </li>
+
+
+                </ul>
+
+              </div>
+
+            </div>
           </div>
-
         </div>
-      </div>
-    </div>
+      {{/if}}
 
 </template>
 
