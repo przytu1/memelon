@@ -15,7 +15,7 @@ MemesIndexController = RouteController.extend({
     if (this.ready()) {
       var circleId = this.params._id;
       var currentCircleName = "All newest";
-      var userEmail = Meteor.user().emails[0].address;
+      var userEmail = Meteor.user() ? Meteor.user().emails[0].address : "";
       if (circleId) {
         currentCircleName = '#' + Circles.findOne({_id: circleId}).name;
         Session.set("addToCircleId", circleId);
