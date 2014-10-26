@@ -3,7 +3,7 @@
 
 Share funny moments and memories as memes privately within circles of friends.
 
-<img src="http://oi59.tinypic.com/vrbkn5.jpg" style="width:100px;height:100px;" />
+![memelon](http://oi59.tinypic.com/vrbkn5.jpg =100)
 
 # About progress (1 person team)
 ======
