@@ -27,7 +27,7 @@ The app was built using:
 * Cordova
 * Bootstrap
 
-It works on following platforms:
+It works on the following platforms:
 
 * web browsers
 * as native app on:
@@ -49,7 +49,7 @@ This page can help with any issues: https://github.com/meteor/meteor/wiki/Meteor
 # Screenshots
 ----
 
-Created during Facebook Hackathon:
+**Created during Facebook Hackathon:**
 
 Accounts & login & public feed for anonymous users
 
@@ -61,7 +61,7 @@ Creating circles and circles functionality
 
 ![memelon](http://oi58.tinypic.com/4t2fm8.jpg)
 
-Created at HackZurich:
+**Created at HackZurich:**
 
 Creating a meme:
 
@@ -70,3 +70,5 @@ Creating a meme:
 Layout, menus, etc
 
 ![memelon](http://oi57.tinypic.com/30sy79g.jpg)
+
+# Thanks! :)
