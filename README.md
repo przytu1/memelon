@@ -37,7 +37,14 @@ It works on following platforms:
 # Running
 ----
 
+1. Install meteor http://docs.meteor.com/
+2. Attach Android device (tested with Android 4.4.2)
+	* make sure it's listed in `adb devices`
+	* make sure it's connected to the same network as your laptop
+3. In the project main directory run:
+	```meteor run android-device -p 3000```
 
+This page can help with any issues: https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration
 
 # Screenshots
 ----
@@ -45,16 +52,21 @@ It works on following platforms:
 Created during Facebook Hackathon:
 
 Accounts & login & public feed for anonymous users
+
 ![memelon](http://oi59.tinypic.com/judffl.jpg)
 
 Creating circles and circles functionality
+
 ![memelon](http://oi58.tinypic.com/34xes5z.jpg)
+
 ![memelon](http://oi58.tinypic.com/4t2fm8.jpg)
 
 Created at HackZurich:
 
 Creating a meme:
+
 ![memelon](http://oi59.tinypic.com/28sn52c.jpg)
 
 Layout, menus, etc
+
 ![memelon](http://oi57.tinypic.com/30sy79g.jpg)
