@@ -1,14 +1,14 @@
 # Memelon
-=========
+======
 
 Share funny moments and memories as memes privately within circles of friends.
 
-<img src="http://oi59.tinypic.com/vrbkn5.jpg" style="width:100px">
+<img src="http://oi59.tinypic.com/vrbkn5.jpg" style="width:100px;height:100px;" />
 
-# About
-=======
+# About progress (1 person team)
+======
 
-This app was build in 48h during HackZurich hackathon (17-18 Oct 2014) in the team of 4 programmers.
+This app was build in 48h during HackZurich hackathon (10-12 Oct 2014) in the team of 4 programmers.
 During the Facebook Hackathon I was extending this app with the crucial functionalities:
 
 * :boom: account system
@@ -19,10 +19,11 @@ During the Facebook Hackathon I was extending this app with the crucial function
 	* memes are finally sent to circles and possible to view only for the users within them
 
 # Running
-=========
+======
 
-# Created during Facebook Hackathon
-==================
+# Screenshots
+======
 
-# Other screenshots
-===================
+Created during Facebook Hackathon:
+
+Created at HackZurich:
